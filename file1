@@ -1,0 +1,27 @@
+import SwiftUI
+import AVKit
+
+struct ContentView: View {
+    
+    var link = "https://github.com/Ubria90/VIDEO2/issues/1#issue-1174956654"
+    
+    var body: some View {
+        
+        VStack{
+            let url = URL(string: link)
+            
+            if url != nil {
+            VideoPlayer(player: AVPlayer(url: url!))
+            }
+            
+            Text("Hello, world!")
+                .padding()
+        }
+    }
+}
+
+struct ContentView_Previews: PreviewProvider {
+    static var previews: some View {
+        ContentView()
+    }
+}
